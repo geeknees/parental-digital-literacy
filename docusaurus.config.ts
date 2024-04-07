@@ -1,109 +1,130 @@
-import { themes as prismThemes } from "prism-react-renderer";
-import type { Config } from "@docusaurus/types";
-import type * as Preset from "@docusaurus/preset-classic";
+import { themes as prismThemes } from 'prism-react-renderer'
+import type { Config } from '@docusaurus/types'
+import type * as Preset from '@docusaurus/preset-classic'
 
 const config: Config = {
-  title: "PDL (Parental Digital Literacy)",
-  tagline: "親が身につけるとよいデジタルリテラシー",
-  favicon: "img/favicon.ico",
+  title: 'PDL (Parental Digital Literacy)',
+  tagline: '親が身につけるとよいデジタルリテラシー',
+  favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: "https://geeknees.github.io",
+  url: 'https://geeknees.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: "/parental-digital-literacy/",
+  baseUrl: '/parental-digital-literacy/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: "parental-digital-literacy", // Usually your GitHub org/user name.
-  projectName: "geeknees.github.io", // Usually your repo name.
+  organizationName: 'parental-digital-literacy', // Usually your GitHub org/user name.
+  projectName: 'geeknees.github.io', // Usually your repo name.
   trailingSlash: false,
 
-  onBrokenLinks: "throw",
-  onBrokenMarkdownLinks: "warn",
+  onBrokenLinks: 'throw',
+  onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: "en",
-    locales: ["en"],
+    defaultLocale: 'ja',
+    locales: ['ja']
   },
 
   presets: [
     [
-      "classic",
+      'classic',
       {
         docs: {
-          sidebarPath: "./sidebars.ts",
+          sidebarPath: './sidebars.ts',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: "https://github.com/geeknees/parental-digital-literacy",
+          editUrl: 'https://github.com/geeknees/parental-digital-literacy'
         },
         theme: {
-          customCss: "./src/css/custom.css",
-        },
-      } satisfies Preset.Options,
-    ],
+          customCss: './src/css/custom.css'
+        }
+      } satisfies Preset.Options
+    ]
   ],
 
   themeConfig: {
     // Replace with your project's social card
-    image: "img/docusaurus-social-card.jpg",
+    image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: "PDL",
+      title: 'PDL',
       logo: {
-        alt: "My Site Logo",
-        src: "img/logo.svg",
+        alt: 'My Site Logo',
+        src: 'img/logo.svg'
       },
       items: [
         {
-          type: "docSidebar",
-          sidebarId: "tutorialSidebar",
-          position: "left",
-          label: "Tutorial",
+          type: 'docSidebar',
+          sidebarId: 'tutorialSidebar',
+          position: 'left',
+          label: 'カテゴリー'
         },
-        { to: "/blog", label: "Blog", position: "left" },
+        { to: '/blog', label: 'ブログ', position: 'left' },
         {
-          href: "https://github.com/geeknees/parental-digital-literacy",
-          label: "GitHub",
-          position: "right",
-        },
-      ],
+          href: 'https://github.com/geeknees/parental-digital-literacy',
+          label: 'GitHub',
+          position: 'right'
+        }
+      ]
     },
     footer: {
-      style: "dark",
+      style: 'dark',
       links: [
         {
-          title: "Docs",
+          title: '未就学児',
           items: [
             {
-              label: "Tutorial",
-              to: "/docs/intro",
+              label: '赤ちゃん',
+              to: '/docs/category/赤ちゃん'
             },
-          ],
+            {
+              label: '幼児',
+              to: '/docs/category/幼児'
+            }
+          ]
         },
         {
-          title: "More",
+          title: '就学児',
           items: [
             {
-              label: "Blog",
-              to: "/blog",
+              label: '小学生',
+              to: 'docs/category/小学生'
             },
             {
-              label: "GitHub",
-              href: "https://github.com/geeknees/parental-digital-literacy",
+              label: '中学生',
+              to: 'docs/category/中学生'
             },
-          ],
+            {
+              label: '高校生',
+              to: 'docs/category/高校生'
+            }
+          ]
         },
+        {
+          title: 'More',
+          items: [
+            {
+              label: 'ブログ',
+              to: '/blog'
+            },
+            {
+              label: 'GitHub',
+              href: 'https://github.com/geeknees/parental-digital-literacy'
+            }
+          ]
+        }
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} PDL, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} PDL, Inc. Built with Docusaurus.`
     },
     prism: {
       theme: prismThemes.github,
-      darkTheme: prismThemes.dracula,
-    },
-  } satisfies Preset.ThemeConfig,
-};
+      darkTheme: prismThemes.dracula
+    }
+  } satisfies Preset.ThemeConfig
+}
 
-export default config;
+export default config
