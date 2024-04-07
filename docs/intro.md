@@ -4,11 +4,4 @@ sidebar_position: 1
 
 # はじめに
 
-Let's discover **Docusaurus in less than 5 minutes**.
-
-## Getting Started
-
-Get started by **creating a new site**.
-
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
-
+情報提供は https://github.com/geeknees/parental-digital-literacy へお願いします。
