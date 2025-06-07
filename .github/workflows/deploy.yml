@@ -16,17 +16,16 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Setup PNPM
-        uses: pnpm/action-setup@v2.2.4
-        with:
-          node-version: 19 # The specific version of Node that should be used to build your site. Defaults to 16. (optional)
-          version: 8.x.x
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: 19
+          node-version: 20
           cache: "pnpm"
           cache-dependency-path: "pnpm-lock.yaml"
+      - name: Setup PNPM
+        uses: pnpm/action-setup@v2.2.4
+        with:
+          version: 8.x.x
       - name: Install
         run: pnpm install
       - name: Build

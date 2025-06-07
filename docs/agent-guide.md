@@ -4,7 +4,7 @@ This project uses [Docusaurus](https://docusaurus.io/) to generate a documentati
 
 ## Requirements
 
-- Node.js 18 or later
+ - Node.js 20 or later
 - pnpm
 
 ## Setup
